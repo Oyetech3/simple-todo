@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div  class="allbody">
+
+        <h2>A TODO LIST</h2>
+    <div class="input">
+    <input id="inp" type="text" placeholder="Enter todo list">
+    <button id="sub"  onclick="addTodo()">Add</button> 
+    </div>
+
+    <ol id="to"></ol>
+    </div>
+
+
+    <script>
+       
+        function addTodo() {
+            const list = document.getElementById("to")
+            const elem = document.createElement("li")
+
+            const inpu = document.getElementById("inp")
+            const text = document.createTextNode(inpu.value)
+
+            elem.appendChild(text)
+            list.appendChild(elem)
+        }
+
+    </script>
+</body>
+</html>
